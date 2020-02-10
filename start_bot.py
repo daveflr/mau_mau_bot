@@ -26,6 +26,7 @@ PORT = int(os.environ.get('PORT', '5000'))
 
 
 def start_bot(updater):
+    updater.deleteWebhook()
     updater.start_webhook(listen="0.0.0.0",
                           port=PORT,
                           url_path=TOKEN)
