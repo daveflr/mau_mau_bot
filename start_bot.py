@@ -19,16 +19,7 @@
 
 # Modify this file if you want a different startup sequence, for example using
 # a Webhook
-import os
-from config import TOKEN
-
-PORT = int(os.environ.get('PORT', '5000'))
 
 
 def start_bot(updater):
-    updater.deleteWebhook()
-    updater.start_webhook(listen="0.0.0.0",
-                          port=PORT,
-                          url_path=TOKEN)
-
-    updater.bot.set_webhook("https://davidygenesisbot.herokuapp.com/" + TOKEN)
+    updater.start_polling()
