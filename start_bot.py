@@ -22,7 +22,7 @@
 import os
 from config import TOKEN
 
-PORT = int(os.environ.get('PORT', '8443'))
+PORT = int(os.environ.get('PORT', '5000'))
 
 
 def start_bot(updater):
