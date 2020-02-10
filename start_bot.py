@@ -30,4 +30,3 @@ def start_bot(updater):
                           url_path=updater.token)
 
     updater.bot.set_webhook("https://davidygenesisbot.herokuapp.com/" + updater.token)
-    updater.idle()
